@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form>
+    <div class="screen">
+        <input name="base" class="screen" type="number" id="base" placeholder="Enter Base">
+        </div>
+    <div class="screen">
+        <input 
+        
+        name="height" class="screen" type="number" id="height" placeholder="Enter Height">
+    </div>
+    <input class="b" type="button" id="calculate" value="Calculate Area">
+    <div id="result"></div>
+   </form> 
+</body>
+</html>
+<script>
+    document.getElementById("calculate").addEventListener("click", function() {
+        var base = (document.getElementById("base").value);
+        var height = (document.getElementById("height").value);
+        if (!isNaN(base) && !isNaN(height)) {
+            var area = 0.5 * base * height;
+            document.getElementById("result").innerHTML = "Area of the triangle: " + area;
+        } else {
+            document.getElementById("result").innerHTML = "Please enter valid numbers for base and height.";
+        }
+    });
+</script>
+
